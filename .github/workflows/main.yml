@@ -6,20 +6,20 @@ on:
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
-    container: cibuilds/hugo:0.81.0
 
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
           path: awesome-identity
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.81.0'
 
       - name: Build site using Hugo
         working-directory: awesome-identity/my-site
         run: |
           hugo -v --buildDrafts --themesDir ../../
-
-      - name: Test Generated HTML files with HTML Proofer
-        working-directory: awesome-identity/my-site
-        run: |
-          htmlproofer public --allow-hash-href --check-html --empty-alt-ignore --disable-external
