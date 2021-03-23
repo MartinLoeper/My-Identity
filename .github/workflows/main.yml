@@ -27,6 +27,6 @@ jobs:
 
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: awesome-identity/my-site/public
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: awesome-identity/my-site/public
