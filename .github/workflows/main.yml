@@ -23,7 +23,7 @@ jobs:
       - name: Build site using Hugo
         working-directory: awesome-identity/my-site
         run: |
-          hugo -v --buildDrafts --themesDir ../../
+          hugo -v --buildDrafts --themesDir ../../ --minify
 
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
