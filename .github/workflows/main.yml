@@ -13,11 +13,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build site using Hugo
-        working_directory: my-site
+        working-directory: my-site
         run: |
           hugo -v --buildDrafts --themesDir ../
 
       - name: Test Generated HTML files with HTML Proofer
-        working_directory: my-site
+        working-directory: my-site
         run: |
           htmlproofer public --allow-hash-href --check-html --empty-alt-ignore --disable-external
