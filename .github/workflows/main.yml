@@ -26,7 +26,7 @@ jobs:
           hugo -v --buildDrafts --themesDir ../../
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: awesome-identity # The folder the action should deploy.
+        uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: awesome-identity/my-site/public
