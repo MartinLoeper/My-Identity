@@ -11,13 +11,15 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+        with:
+          path: awesome-identity
 
       - name: Build site using Hugo
-        working-directory: my-site
+        working-directory: awesome-identity/my-site
         run: |
-          hugo -v --buildDrafts --themesDir ../
+          hugo -v --buildDrafts --themesDir ../../
 
       - name: Test Generated HTML files with HTML Proofer
-        working-directory: my-site
+        working-directory: awesome-identity/my-site
         run: |
           htmlproofer public --allow-hash-href --check-html --empty-alt-ignore --disable-external
