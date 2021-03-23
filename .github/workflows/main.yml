@@ -12,7 +12,6 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-          path: awesome-identity
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -21,12 +20,12 @@ jobs:
           extended: true
 
       - name: Build site using Hugo
-        working-directory: awesome-identity/my-site
+        working-directory: my-site
         run: |
-          hugo -v --buildDrafts --themesDir ../../
+          hugo -v --buildDrafts --themesDir ../
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: awesome-identity/my-site/public # The folder the action should deploy.
+          folder: my-site/public # The folder the action should deploy.
