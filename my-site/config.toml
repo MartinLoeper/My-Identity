@@ -1,0 +1,33 @@
+theme = "awesome-identity"
+baseURL = "http://mloeper.me"
+title = "Martin Löper - Cloud Solutions Architect"
+
+
+## Profile Configurations
+[params.profile]
+  portrait = "/imgs/profile_pic.jpg"
+  firstname = "Martin"
+  lastname = "Löper"
+  title = "Cloud Solutions Architect"
+  bio = """John Smith brings over 40 years experience leading, contributing to, and growing engineering organizations in top [**VR**](https://en.wikipedia.org/wiki/Virtual_reality) technology companies.
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et lacinia metus. Aliquam venenatis, orci ornare mollis congue, mi arcu lobortis tellus, id pulvinar ex ante eu mauris.
+
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+  """
+
+[params.contacts]
+  github = "MartinLoeper"
+  twitter = "martin_loeper"
+  linkedin = "martinloeper"
+  stackoverflow = "10473469"
+  medium = "@martin.loeper"
+  email = "martin.loeper@nesto-software.de"
+  keybase = "martinloeper"
+  gitlab = "MartinLoeper"
+
+
+## Footer Configurations
+[params.footer]
+  copyright = "© 2019-2020 Byungjin Park. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
+  poweredBy = true

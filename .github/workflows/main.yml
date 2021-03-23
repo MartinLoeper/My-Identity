@@ -1,0 +1,23 @@
+name: Release New GH Pages Version
+
+on:
+  push:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    container: cibuilds/hugo:0.81.0
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Build site using Hugo
+        working_directory: my-site
+        run: |
+          hugo -v --buildDrafts --themesDir ../
+
+      - name: Test Generated HTML files with HTML Proofer
+        working_directory: my-site
+        run: |
+          htmlproofer public --allow-hash-href --check-html --empty-alt-ignore --disable-external
