@@ -1,9 +1,7 @@
 theme = "awesome-identity"
 baseURL = "https://mloeper.me"
-title = "Martin Löper - Cloud Solutions Architect"
+title = "Martin Löper | Cloud Solutions Architect | About Me"
 
-
-## Profile Configurations
 [params.profile]
   portrait = "/imgs/profile_pic.jpg"
   firstname = "Martin"
@@ -26,7 +24,10 @@ title = "Martin Löper - Cloud Solutions Architect"
   keybase = "martinloeper"
   gitlab = "MartinLoeper"
 
-## Footer Configurations
+[params.meta]
+  description = "Martin Löper is a cloud solutions architect working for the start-up company Nesto based in Karlsruhe. This webpage hosts the official profile."
+  keywords = "Martin Löper, cloud solutions architect, profile, about me, Nesto"
+
 [params.footer]
   copyright = "© 2021 Martin Löper. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
   poweredBy = true
