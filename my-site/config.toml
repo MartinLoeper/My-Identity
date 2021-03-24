@@ -23,6 +23,7 @@ title = "Martin Löper | Cloud Solutions Architect | About Me"
   email = "martin.loeper@nesto-software.de"
   keybase = "martinloeper"
   gitlab = "MartinLoeper"
+  cv = "https://github.com/MartinLoeper/My-CV/releases/download/latest/cv-martin-loeper.pdf"
 
 [params.meta]
   description = "Martin Löper is a cloud solutions architect working for the start-up company Nesto based in Karlsruhe. This webpage hosts the official profile."

@@ -1,13 +1,17 @@
 {{ with .Site.Params.contacts -}}
 <section class="contacts">
   {{- range $service, $id := . -}}
-    {{- if (eq $service "github") }}
+   {{- if (eq $service "github") }}
   <a class="contact" href="https://github.com/{{ $id }}">
     <i class="fab fa-github" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "twitter") }}
   <a class="contact" href="https://twitter.com/{{ $id }}">
     <i class="fab fa-twitter" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "cv") }}
+  <a class="contact" href="{{ $id }}">
+    <i class="fab fa-file-pdf" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "facebook") }}
   <a class="contact" href="https://facebook.com/{{ $id }}">
