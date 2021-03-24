@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/martinloeper
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mloeper.me
+  * I am martinloeper (https://keybase.io/martinloeper) on keybase.
+  * I have a public key ASARwJgG8nK41--vdq7578ZdT272OEeh36xkicOFa1jdlQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012011c09806f272b8d7efaf76aef9efc65d4f6ef63847a1dfac6489c3856b58dd950a",
+      "host": "keybase.io",
+      "kid": "012011c09806f272b8d7efaf76aef9efc65d4f6ef63847a1dfac6489c3856b58dd950a",
+      "uid": "ff23efb76d869af6c926873cbb919b19",
+      "username": "martinloeper"
+    },
+    "merkle_root": {
+      "ctime": 1616549958,
+      "hash": "699198fc1e728d19f4d3e7cb4bf8dac28a4a8e516ec00daf858290271c2cf4e5f59da0ce2a1026b015789570ad9306c9a178e27d72c7876d83624e15d4c7f8fb",
+      "hash_meta": "0f03fd29a6ab925ebd376fbf9a105acff51ceca9fa152e5e07c3e542e45ba7dc",
+      "seqno": 19453356
+    },
+    "service": {
+      "entropy": "ErYOgf4ivaSObm+ub0WQOMXy",
+      "hostname": "mloeper.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.1"
+  },
+  "ctime": 1616549995,
+  "expire_in": 504576000,
+  "prev": "e672033bcbe02b870ee7a3105871b504caeee15b83207d27d4c364e5d94a2686",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgEcCYBvJyuNfvr3au+e/GXU9u9jhHod+sZInDhWtY3ZUKp3BheWxvYWTESpcCEMQg5nIDO8vgK4cO56MQWHG1BMru4VuDIH0n1MNk5dlKJobEIMq9Cizs8xP/e8zvtgjaM58sbMI7LmzBphTYMgPrRvKRAgHCo3NpZ8RAA3bsfvb/QNZUyDf3pIdgxM8xUCrAuRluDOdGcpWNFgvkENszGxG7h6bNcVOcud/OIU3tB7QvZ4y7CMwEYWnQDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKk7mebNwgYbRNT37yBrm70rGL4tVXPoptzCHPRqRIEco3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/martinloeper
+
+==================================================================
