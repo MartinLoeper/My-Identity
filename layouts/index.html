@@ -23,9 +23,18 @@
 {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "sass/main.scss" | toCSS $options | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    <!-- <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"> -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKMY35MRW6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZKMY35MRW6');
+    </script>
   </head>
   <body>
     <div class="wrap">
