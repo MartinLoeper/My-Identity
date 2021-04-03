@@ -1,7 +1,11 @@
 {{ with .Site.Params.contacts -}}
 <section class="contacts">
   {{- range $service, $id := . -}}
-  {{- if (eq $service "credly") }}
+  {{- if (eq $service "mongodb") }}
+  <a class="contact" href="{{ $id }}">
+    <i class="icon-mongodb"></i>
+  </a>
+  {{- else if (eq $service "credly") }}
   <a class="contact" href="https://www.credly.com/users/{{ $id }}/badges">
     <i class="fab fa-aws"></i>
   </a>
