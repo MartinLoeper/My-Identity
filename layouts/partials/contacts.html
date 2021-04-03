@@ -2,7 +2,7 @@
 <section class="contacts">
   {{- range $service, $id := . -}}
   {{- if (eq $service "monero") }}
-  <a class="contact" href="monero:{{ $id }}?recipient_name=Martin%20L%C3%B6per">
+  <a class="contact" href="monero://{{ $id }}?recipient_name=Martin%20L%C3%B6per">
     <i class="fab fa-monero" aria-hidden="true"></i>
   </a>
   {{- else if (eq $service "acg") }}
