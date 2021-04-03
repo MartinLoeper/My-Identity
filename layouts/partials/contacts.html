@@ -1,7 +1,15 @@
 {{ with .Site.Params.contacts -}}
 <section class="contacts">
   {{- range $service, $id := . -}}
-   {{- if (eq $service "github") }}
+  {{- if (eq $service "acg") }}
+  <a class="contact" href="https://learn.acloud.guru/profile/{{ $id }}">
+    <i class="fas fa-cloud" aria-hidden="true"></i>
+  </a>
+  {{- else if (eq $service "scholar") }}
+  <a class="contact" href="https://scholar.google.com/citations?user={{ $id }}">
+    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+  </a>
+   {{- else if (eq $service "github") }}
   <a class="contact" href="https://github.com/{{ $id }}">
     <i class="fab fa-github" aria-hidden="true"></i>
   </a>
