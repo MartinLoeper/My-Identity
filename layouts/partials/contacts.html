@@ -1,7 +1,11 @@
 {{ with .Site.Params.contacts -}}
 <section class="contacts">
   {{- range $service, $id := . -}}
-  {{- if (eq $service "acg") }}
+  {{- if (eq $service "monero") }}
+  <a class="contact" href="monero:{{ $id }}?recipient_name=Martin%20L%C3%B6per">
+    <i class="fab fa-monero" aria-hidden="true"></i>
+  </a>
+  {{- else if (eq $service "acg") }}
   <a class="contact" href="https://learn.acloud.guru/profile/{{ $id }}">
     <i class="fas fa-cloud" aria-hidden="true"></i>
   </a>
