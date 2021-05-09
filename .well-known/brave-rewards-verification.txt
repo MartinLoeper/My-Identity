@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: mloeper.me
+Token: ba889fb6cd6d5f49e97b380bdbb7bb54494a9e54006c8e1afc440138e0db38a8
