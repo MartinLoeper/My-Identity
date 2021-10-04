@@ -5,6 +5,8 @@
 # generated files by hugo
 /public/
 /resources/_gen/
+my-site/resources
+my-site/public
 
 # executable may be added to repository
 hugo.exe
