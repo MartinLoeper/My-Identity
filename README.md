@@ -20,6 +20,10 @@ There are many good reasons having an online single-page Hugo theme to introduce
 If you want to create something similar, look at the fantastic [Awesome Identity Hugo theme on GitHub](https://github.com/posquit0/hugo-awesome-identity) which I forked with this repository.  
 If you want to get in touch, feel free to connect via [LinkedIn](https://www.linkedin.com/in/martinloeper/).
 
+## Local Development
+
+Please note that you must name your local workspace as follows for the local scripts to work: `git clone git@github.com:MartinLoeper/My-Identity.git awesome-identity`. This is important because hugo uses the workspace folder name as theme name. That is a design fault in this repository's folder structure which should be fixed in the future.
+
 ## Copyright Notice
 
 You are free to take the original *Awesome Identity* project and modify it to create your own landing page. Please don't link or distribute my repository or website without my permission, though!
