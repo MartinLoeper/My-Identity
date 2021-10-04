@@ -37,3 +37,8 @@ title = "Martin Löper | Cloud Solutions Architect | About Me"
 [params.footer]
   copyright = "© 2021 Martin Löper. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
   poweredBy = true
+
+[params.actions]
+  0 = { url = "https://www.credly.com/badges/e00de02f-620b-41b5-8ad7-3caaa7993bc9", name = "CSA@Nesto" }
+  1 = { url = "https://online.stanford.edu/programs/cybersecurity-graduate-program", name = "CS@Stanford" }
+  2 = { url = "https://www.wirtschaftsinformatik.kit.edu/english/index.php", name = "CS@KIT" }
