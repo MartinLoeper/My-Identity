@@ -3,7 +3,7 @@ name: Release New GH Pages Version
 on:
   push:
   schedule:
-    - cron: "0 0 12 1 * ?"
+    - cron: "0 0 1 * *"
 
 jobs:
   build-and-release:
