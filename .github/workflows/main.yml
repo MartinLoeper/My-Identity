@@ -37,7 +37,7 @@ jobs:
           
   validation:
     runs-on: ubuntu-latest
-    container: filiph/linkcheck
+    container: tennox/linkcheck@sha256:1e4589c24c66cc61b5e55def6a554b608f678418d948db05d6cd19f8f6af61ed
     needs: [build-and-release]
     
     steps:
