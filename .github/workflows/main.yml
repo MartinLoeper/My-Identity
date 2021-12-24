@@ -42,4 +42,4 @@ jobs:
       # TODO: the link checker currently does not prevent a faulty deployment, it just notifies the repo owner if schedule is working as expected
       - uses: filiph/linkcheck@v2.0.15+1
         with:
-          arguments: -e --connection-failures-as-warnings --skip-file skip-file.txt
+          arguments: https://mloeper.me -e --connection-failures-as-warnings --skip-file skip-file.txt
