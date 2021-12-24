@@ -35,11 +35,13 @@ jobs:
           publish_dir: awesome-identity/my-site/public
           cname: mloeper.me
           
+  validation:
+    runs-on: ubuntu-latest
+    container: filiph/linkcheck
+    needs: [build-and-release]
+    
+    steps:
       - name: Create skip file for link checker
         run: |
           echo https://online.stanford.edu/programs/cybersecurity-graduate-program > skip-file.txt
-          
-      # TODO: the link checker currently does not prevent a faulty deployment, it just notifies the repo owner if schedule is working as expected
-      - uses: filiph/linkcheck@v2.0.15+1
-        with:
-          arguments: https://mloeper.me -e --connection-failures-as-warnings --skip-file skip-file.txt
+          /root/.pub-cache/bin/linkcheck https://mloeper.me -e --connection-failures-as-warnings --skip-file skip-file.txt
