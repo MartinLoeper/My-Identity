@@ -2,8 +2,9 @@ name: Release New GH Pages Version
 
 on:
   push:
+  workflow_dispatch:
   schedule:
-    - cron: "0 0 1 * *"
+    - cron: "0 0 * * *"
 
 jobs:
   build-and-release:
@@ -33,3 +34,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: awesome-identity/my-site/public
           cname: mloeper.me
+          
+      - name: Create skip file for link checker
+        run: |
+          echo https://online.stanford.edu/programs/cybersecurity-graduate-program > skip-file.txt
+          
+      # TODO: the link checker currently does not prevent a faulty deployment, it just notifies the repo owner if schedule is working as expected
+      - uses: filiph/linkcheck@v2.0.15+1
+        with:
+          arguments: -e --connection-failures-as-warnings --skip-file skip-file.txt
