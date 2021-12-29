@@ -57,7 +57,7 @@ jobs:
       - name: Save my page and all referenced webpages to the internet archive
         uses: JamieMagee/wayback@v1.2.16
         with:
-          url: mloeper.me
+          url: https://mloeper.me
           saveErrors: false
           saveOutlinks: true
           saveScreenshot: true
