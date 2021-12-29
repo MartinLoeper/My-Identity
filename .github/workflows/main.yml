@@ -55,7 +55,7 @@ jobs:
     
     steps:
       - name: Save my page and all referenced webpages to the internet archive
-        uses: JamieMagee/wayback@v1.2.16
+        uses: JamieMagee/wayback@v1.3.15
         with:
           url: https://mloeper.me
           saveErrors: false
