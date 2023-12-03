@@ -24,6 +24,10 @@ If you want to get in touch, feel free to connect via [LinkedIn](https://www.lin
 
 Please note that you must name your local workspace as follows for the local scripts to work: `git clone git@github.com:MartinLoeper/My-Identity.git awesome-identity`. This is important because hugo uses the workspace folder name as theme name. That is a design fault in this repository's folder structure which should be fixed in the future.
 
+## TODOs
+
+- Replace unstoppabledomains link with Mastodon profile link
+
 ## Copyright Notice
 
 You are free to take the original *Awesome Identity* project and modify it to create your own landing page. Please don't link or distribute my repository or website without my permission, though!
