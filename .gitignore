@@ -59,3 +59,17 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+### Astro/Node.js ###
+# Dependencies
+blog/node_modules/
+
+# Build output
+blog/dist/
+
+# Astro cache
+blog/.astro/
+
+# Logs
+*.log
+npm-debug.log*
