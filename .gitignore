@@ -59,3 +59,13 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+### Astro ###
+# Dependencies
+blog/node_modules/
+
+# Build output
+blog/dist/
+
+# Cache directory
+blog/.astro/
