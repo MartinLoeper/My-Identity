@@ -110,17 +110,38 @@ Initialize and configure a new Astro project:
 
 ---
 
-### [ ] Step 7: Test Full Workflow
+### [x] Step 7: Test Full Workflow
+<!-- chat-id: 47589836-268d-4a54-907f-145d441e4e68 -->
 
-Run complete CI/CD pipeline:
-- Test with blog file changes (Astro should build)
-- Test without blog changes (Astro should skip)
-- Test manual workflow_dispatch (both should build)
-- Verify both sites are accessible
+✅ **Completed** - Full CI/CD pipeline tested successfully:
 
-**Verification**: 
-- Hugo site at https://mloeper.me
-- Astro blog at https://mloeper.me/blog
+**Tests Performed:**
+1. ✅ **Test with blog file changes** (Astro should build)
+   - Modified `blog/src/pages/index.astro`
+   - Workflow run: [#20530397164](https://github.com/MartinLoeper/My-Identity/actions/runs/20530397164)
+   - Result: ✓ changes (6s), ✓ build-astro-blog (35s), ✓ build-and-release (8s), ✓ deployed
+
+2. ✅ **Test without blog changes** (Astro should skip)
+   - Modified `.gitignore` (non-blog file)
+   - Workflow run: [#20530422252](https://github.com/MartinLoeper/My-Identity/actions/runs/20530422252)
+   - Result: ✓ changes (6s), - build-astro-blog (skipped), ✓ build-and-release (10s)
+
+3. ✅ **Test manual workflow_dispatch** (both should build)
+   - Triggered manually via `gh workflow run`
+   - Workflow run: [#20530457490](https://github.com/MartinLoeper/My-Identity/actions/runs/20530457490)
+   - Result: ✓ changes (4s), ✓ build-astro-blog (33s), ✓ build-and-release (5s), ✓ deployed
+
+**Issues Fixed During Testing:**
+- Converted blog from gitlink to regular directory for proper path filtering
+- Upgraded artifact actions from v3 to v4 (deprecated)
+- Removed npm cache config (no package-lock.json)
+- Changed `npm ci` to `npm install`
+- Fixed workflow_dispatch/schedule handling in path filter
+
+**Verification**:
+- Hugo site deployed at https://mloeper.me
+- Astro blog deployed at https://mloeper.me/blog
+- All three test scenarios passed successfully
 
 ---
 
