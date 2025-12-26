@@ -86,13 +86,15 @@ Initialize and configure a new Astro project:
 <!-- chat-id: 0008cf0f-b224-4dd7-ad73-0d33e8785919 -->
 
 ✅ **Completed** - Modified `build-and-release` job in `.github/workflows/main.yml`:
-- Added `build-astro-blog` to job dependencies with `if: always()` condition
-- Created `deploy-output` directory and copy Hugo's public folder contents
+- Added `build-astro-blog` to job dependencies with refined condition: `if: always() && needs.changes.result == 'success'`
+- Created `deploy-output` directory and copy Hugo's public folder contents (including hidden files)
 - Download Astro build artifact conditionally (`if: needs.build-astro-blog.result == 'success'`)
 - Merge Astro `dist/` contents to `deploy-output/blog/` when available
 - Updated deployment to use `deploy-output` directory
+- Fixed path filter with base parameter for scheduled/manual runs
+- Fixed copy command to include hidden files (`.nojekyll`, etc.)
 
-**Verification**: Merged output workflow handles both Hugo-only and Hugo+Astro scenarios
+**Verification**: Merged output workflow handles both Hugo-only and Hugo+Astro scenarios, including scheduled runs
 
 ---
 
