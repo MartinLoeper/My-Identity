@@ -10,14 +10,15 @@ jobs:
   changes:
     runs-on: ubuntu-latest
     outputs:
-      blog: ${{ steps.filter.outputs.blog }}
+      blog: ${{ steps.filter.outputs.blog || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' }}
     steps:
       - uses: actions/checkout@v2
+        if: github.event_name == 'push'
 
       - uses: dorny/paths-filter@v2
+        if: github.event_name == 'push'
         id: filter
         with:
-          base: ${{ github.event_name == 'push' && github.ref || 'HEAD~1' }}
           filters: |
             blog:
               - 'blog/**'
