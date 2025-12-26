@@ -68,16 +68,17 @@ Initialize and configure a new Astro project:
 
 ---
 
-### [ ] Step 4: Add Astro Build Job to Workflow
+### [x] Step 4: Add Astro Build Job to Workflow
+<!-- chat-id: 0e1bebcf-264f-4863-a7a4-df27a17b5cae -->
 
-Create new job in `.github/workflows/main.yml`:
-- Setup Node.js (latest LTS)
-- Install dependencies in `/blog` directory
-- Run `npm run build`
-- Upload `blog/dist` as artifact
-- Make job conditional on path filter output
+✅ **Completed** - Added `build-astro-blog` job to `.github/workflows/main.yml`:
+- Setup Node.js with LTS version and npm caching
+- Install dependencies in `/blog` directory using `npm ci`
+- Run `npm run build` to build Astro blog
+- Upload `blog/dist` as artifact named `astro-blog`
+- Job runs conditionally: `if: needs.changes.outputs.blog == 'true' || github.event_name == 'workflow_dispatch'`
 
-**Verification**: Job runs only when blog files change
+**Verification**: Job configuration complete, will run only when blog files change or on manual dispatch
 
 ---
 
