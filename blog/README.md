@@ -1,10 +1,12 @@
-# Astro Starter Kit: Minimal
+# Blog for mloeper.me
+
+This is the blog section of mloeper.me, powered by Astro.
+
+## Astro Starter Kit: Minimal
 
 ```sh
 npm create astro@latest -- --template minimal
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ## 🚀 Project Structure
 
