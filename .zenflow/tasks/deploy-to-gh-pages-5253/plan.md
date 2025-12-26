@@ -82,15 +82,17 @@ Initialize and configure a new Astro project:
 
 ---
 
-### [ ] Step 5: Implement Output Merge Logic
+### [x] Step 5: Implement Output Merge Logic
+<!-- chat-id: 0008cf0f-b224-4dd7-ad73-0d33e8785919 -->
 
-Modify deployment job in `.github/workflows/main.yml`:
-- Download Hugo build artifact
-- Download Astro build artifact (if available)
-- Copy Astro `dist/` contents to Hugo `public/blog/`
-- Handle case when Astro didn't build (no changes)
+✅ **Completed** - Modified `build-and-release` job in `.github/workflows/main.yml`:
+- Added `build-astro-blog` to job dependencies with `if: always()` condition
+- Created `deploy-output` directory and copy Hugo's public folder contents
+- Download Astro build artifact conditionally (`if: needs.build-astro-blog.result == 'success'`)
+- Merge Astro `dist/` contents to `deploy-output/blog/` when available
+- Updated deployment to use `deploy-output` directory
 
-**Verification**: Merged output contains both Hugo and Astro files
+**Verification**: Merged output workflow handles both Hugo-only and Hugo+Astro scenarios
 
 ---
 

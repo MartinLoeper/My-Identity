@@ -53,7 +53,8 @@ jobs:
 
   build-and-release:
     runs-on: ubuntu-latest
-    needs: changes
+    needs: [changes, build-astro-blog]
+    if: always()
 
     steps:
       - uses: actions/checkout@v2
@@ -73,11 +74,29 @@ jobs:
         run: |
           hugo -v --buildDrafts --themesDir ../../ --minify
 
+      - name: Create deployment directory
+        run: |
+          mkdir -p deploy-output
+          cp -r awesome-identity/my-site/public/* deploy-output/
+
+      - name: Download Astro blog artifact
+        if: needs.build-astro-blog.result == 'success'
+        uses: actions/download-artifact@v3
+        with:
+          name: astro-blog
+          path: astro-temp
+
+      - name: Merge Astro blog into deployment
+        if: needs.build-astro-blog.result == 'success'
+        run: |
+          mkdir -p deploy-output/blog
+          cp -r astro-temp/* deploy-output/blog/
+
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: awesome-identity/my-site/public
+          publish_dir: deploy-output
           cname: mloeper.me
           
   validation:
