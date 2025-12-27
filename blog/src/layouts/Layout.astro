@@ -140,8 +140,8 @@ let generatedCss: string = cssLines.join('\n')
     {pageImage && <meta name="twitter:image" content={pageImage} />}
     <meta name="keywords" content={pageKeywords} />
     <link rel="canonical" href={pageUrl} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href={`${import.meta.env.BASE_URL}/sitemap-index.xml`} />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.svg`} type="image/svg+xml" />
     <link
       rel="alternate"
       type="application/rss+xml"
