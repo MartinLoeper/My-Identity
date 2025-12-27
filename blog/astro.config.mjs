@@ -37,7 +37,7 @@ export default defineConfig({
       remarkDirective,
       remarkGithubCard,
       remarkAdmonitions,
-      [remarkCharacterDialogue, { characters: siteConfig.characters }],
+      [remarkCharacterDialogue, { characters: siteConfig.characters, base: '/blog' }],
       remarkUnknownDirectives,
       remarkMath,
       remarkGemoji,

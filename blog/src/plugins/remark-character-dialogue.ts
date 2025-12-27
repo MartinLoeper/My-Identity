@@ -14,8 +14,9 @@ function h(el: string, attrs: Properties = {}, children: any[] = []): P {
   }
 }
 
-const remarkCharacterDialogue: Plugin<[{ characters: Record<string, string> }], Root> =
+const remarkCharacterDialogue: Plugin<[{ characters: Record<string, string>; base?: string }], Root> =
   (opts) => (tree) => {
+    const base = opts.base || ''
     // Type guard to check if a string is a valid character dialogue key
     function isCharacterDialogue(s: string): s is keyof typeof opts.characters {
       return opts.characters.hasOwnProperty(s) && opts.characters[s] !== undefined
@@ -48,7 +49,7 @@ const remarkCharacterDialogue: Plugin<[{ characters: Record<string, string> }], 
             class: 'character-dialogue-image',
             alt: characterName,
             loading: 'lazy',
-            src: opts.characters[characterName],
+            src: `${base}/${opts.characters[characterName].replace(/^\//, '')}`,
             width: 100,
           }),
           h('div', { class: 'character-dialogue-content' }, node.children),
