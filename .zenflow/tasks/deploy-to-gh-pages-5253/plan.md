@@ -30,19 +30,6 @@ Do not make assumptions on important decisions — get clarification first.
 
 ## Implementation Steps
 
-### [ ] Step 1: Create Astro Project in /blog Directory
-<!-- chat-id: fc70c562-f27e-4d8e-9ae3-3b8bad04d42e -->
-
-Initialize and configure a new Astro project:
-- Run `npm create astro@latest` in `/blog` directory
-- Configure `astro.config.mjs` with `base: '/blog'` and `site: 'https://mloeper.me'`
-- Set output directory to `./dist`
-- Create basic blog structure with test content
-
-**Verification**: Run `cd blog && npm run build` successfully
-
----
-
 ### [x] Step 2: Update .gitignore for Astro
 <!-- chat-id: f4327648-3edf-4036-b65f-5a60cc6f5254 -->
 
